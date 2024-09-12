@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#main-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  height: 90%;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "header header" "main-one main-two";
+}
+
+.card-one {
+  grid-area: header;
+  padding: 2rem;
+  background-color: lightcyan;
+}
+
+.card-two {
+  grid-area: main-one;
+  background-color: hsl(179, 62%, 43%);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-three {
+  grid-area: main-two;
+  background-color: hsl(218, 22%, 67%);
+  padding: 2rem;
+}
+
+.card-one .heading {
+  font-size: 3rem;
+  font-family: roboto;
+  color: hsl(179, 62%, 43%);
+  margin-bottom: 0.5rem;
+}
+
+.card-one .heading-text {
+  font-size: 2rem;
+  font-family: roboto;
+  color: hsl(71, 73%, 54%);
+  margin-bottom: 0.5rem;
+}
+
+.card-one .text {
+  font-size: 1.2rem;
+  font-family: roboto;
+  margin-bottom: 0.5rem;
+}
+
+/* Card Two */
+.card-two .heading {
+  font-size: 2rem;
+  font-family: sans-serif;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.card-two .pricing {
+  font-size: 1.2rem;
+  color: white;
+  font-family: roboto;
+  margin-bottom: 1rem;
+}
+
+.card-two span {
+  font-size: 2rem;
+  color: white;
+  font-weight: 700;
+  font-family: roboto;
+  margin-right: 0.5rem;
+}
+
+.card-two .text {
+  font-size: 1.1rem;
+  font-family: roboto;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.card-two button {
+  border: none;
+  padding: 1rem;
+  width: 50%;
+  background-color: yellow;
+  font-family: roboto;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px gray;
+}
+
+.card-three .heading {
+  font-size: 2rem;
+  font-family: roboto;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.card-three ul {
+  list-style: none;
+}
+
+.card-three ul li {
+  font-size: 1.1rem;
+  font-family: roboto;
+  color: white;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 350px) and (max-width: 720px) {
+  #main-container {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .card-container {
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "header" "main-one" "main-two";
+  }
+  .card-one {
+    padding: 1rem;
+  }
+
+  .card-two {
+    padding: 1rem;
+  }
+
+  .card-three {
+    padding: 1rem;
+  }
+
+  .card-one .heading {
+    font-size: 1.5rem;
+  }
+
+  .card-one .heading-text {
+    font-size: 1rem;
+  }
+
+  .card-one .text {
+    font-size: 1rem;
+    font-family: roboto;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Card Two */
+  .card-two .heading {
+    font-size: 1.5rem;
+  }
+
+  .card-two .pricing {
+    font-size: 1rem;
+  }
+
+  .card-two span {
+    font-size: 1.5rem;
+  }
+
+  .card-two .text {
+    font-size: 1rem;
+  }
+
+  .card-two button {
+    font-size: 1rem;
+  }
+
+  .card-three .heading {
+    font-size: 1.5rem;
+  }
+
+  .card-three ul {
+    list-style: none;
+  }
+
+  .card-three ul li {
+    font-size: 1rem;
+  }
+}
